@@ -2,6 +2,7 @@ import React from "react";
 import NavBar from "@/app/components/navbar";
 import Hero from "@/app/components/hero";
 import { Tile } from "@/app/components/Tile";
+import HorizontalSlider from "@/app/components/HorizontalSlider";
 
 type Props = {};
 
@@ -11,7 +12,8 @@ const Home: React.FC = (props: Props) => {
       <NavBar />
       <Hero />
       <Tile />
-      <NavBar variant={"bottom"} />
+      <HorizontalSlider />
+      {/* <NavBar variant={"bottom"} /> */}
     </div>
   );
 };

@@ -11,7 +11,7 @@ const Hero: React.FC = (props: Props) => {
     <div className={"hero"}>
       <Image
         className={cn("hero-img")}
-        src="/use1.webp"
+        src="/usse.png"
         alt="model"
         fill={true}
         priority={true}
