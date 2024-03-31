@@ -3,14 +3,13 @@
 import { ReactNode, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { Store, allCollections } from "@/lib/initalizeDatabase";
 
 interface TileProps {}
 
 export function Tile({}: TileProps) {
   return (
     <>
-      {allCollections.map((tile, id) => (
+      {/* {allCollections.map((tile, id) => (
         <figure className="tile relative" key={id}>
           <Image
             className={cn("tile-img")}
@@ -25,7 +24,7 @@ export function Tile({}: TileProps) {
             </p>
           </div>
         </figure>
-      ))}
+      ))} */}
     </>
   );
 }

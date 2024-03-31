@@ -1,3 +1,5 @@
+"use client";
+
 declare module "localbase" {
   interface Localbase {
     collection(collectionName: string): Collection;

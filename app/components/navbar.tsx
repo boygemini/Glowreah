@@ -10,7 +10,6 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Button from "./ui/Button";
-import Image from "next/image";
 
 export interface IAppProps {
   variant?: String;
