@@ -9,7 +9,7 @@ interface TileProps {}
 export function Tile({}: TileProps) {
   return (
     <>
-      {/* {allCollections.map((tile, id) => (
+      {["tops", "pants", "skirts", "gowns"].map((tile, id) => (
         <figure className="tile relative" key={id}>
           <Image
             className={cn("tile-img")}
@@ -24,7 +24,7 @@ export function Tile({}: TileProps) {
             </p>
           </div>
         </figure>
-      ))} */}
+      ))}
     </>
   );
 }

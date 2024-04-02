@@ -29,7 +29,9 @@
     ".next/types/**/*.ts",
     "app/components/ui/Button.jsx",
     "lib/useDatabase.jsx",
-    "lib/DatabaseProvider.jsx"
+    "lib/DatabaseProvider.jsx",
+    "lib/createDatabase.js",
+    "lib/simpleIndexedDB.js"
   ],
   "exclude": ["node_modules"]
 }
