@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext } from "react";
 import useDatabase from "./useDatabase";
 
 const DatabaseContext = createContext({

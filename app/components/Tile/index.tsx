@@ -1,30 +1,24 @@
-"use client";
+import Img from "../ui/card-image";
 
-import { ReactNode, useEffect } from "react";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+interface TileProps {
+  id: string;
+  title: string;
+  imgSrc: string;
+  imgAlt?: string;
+}
 
-interface TileProps {}
-
-export function Tile({}: TileProps) {
+export function Tile({ id, title, imgSrc, imgAlt }: TileProps) {
   return (
     <>
-      {["tops", "pants", "skirts", "gowns"].map((tile, id) => (
-        <figure className="tile relative" key={id}>
-          <Image
-            className={cn("tile-img")}
-            alt="tile"
-            src={"/use2.webp"}
-            layout="fill"
-          />
-          <div className="text-content absolute bottom-0 p-4 py-7 bg-yellow-500">
-            <h1 className="title font-semibold text-3xl">{tile}</h1>
-            <p className="text-1xl underline underline-offset-8">
-              Discover more
-            </p>
-          </div>
-        </figure>
-      ))}
+      <figure className="tile relative" key={id}>
+        <Img variant="fill-bg" src={imgSrc} alt={imgAlt} />
+        <div className="text-content absolute bottom-6 left-6 p-4 py-7">
+          <h1 className="title font-semibold text-3xl">{title}</h1>
+          <p className="discover text-1xl underline underline-offset-8">
+            Discover more
+          </p>
+        </div>
+      </figure>
     </>
   );
 }

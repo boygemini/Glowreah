@@ -31,7 +31,8 @@
     "lib/useDatabase.jsx",
     "lib/DatabaseProvider.jsx",
     "lib/createDatabase.js",
-    "lib/simpleIndexedDB.js"
+    "lib/simpleIndexedDB.js",
+    "app/components/Slide/index.jsx"
   ],
   "exclude": ["node_modules"]
 }

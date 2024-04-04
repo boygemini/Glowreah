@@ -1,19 +1,20 @@
-import { Button as ShadBtn } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 
 interface ButtonProps {
   variant?: String;
   name?: String;
   text: String;
+  style?: String;
 }
 
 function Button({ variant, text, name }: ButtonProps) {
   switch (variant) {
     case "menu":
       return (
-        <ShadBtn
-          className={cn("menu-btn text-black flex flex-col h-17 font-sans p-0")}
+        <button
+          className={cn(
+            `${name} menu-btn text-black flex flex-col items-center h-17 font-sans p-0`
+          )}
         >
           <svg
             width="28px"
@@ -31,18 +32,18 @@ function Button({ variant, text, name }: ButtonProps) {
             />
           </svg>
           {text}
-        </ShadBtn>
+        </button>
       );
 
     default:
       return (
-        <ShadBtn
+        <button
           className={cn(
-            `${name} w-40 h-14 rounded-full	text-xl	text-black bg-white m-4 hover:bg-slate-300`
+            `${name} min-w-40 min-h-14 text-x	text-black bg-white hover:bg-slate-300`
           )}
         >
           {text}
-        </ShadBtn>
+        </button>
       );
   }
 }
