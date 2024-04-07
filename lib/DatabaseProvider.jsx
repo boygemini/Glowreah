@@ -9,7 +9,7 @@ const DatabaseContext = createContext({
 });
 
 const DatabaseProvider = ({ children }) => {
-  const { db, initialized } = useDatabase();
+  const { db, initialized, allStores } = useDatabase();
 
   return (
     <DatabaseContext.Provider value={{ db, initialized }}>

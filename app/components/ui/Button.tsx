@@ -39,7 +39,7 @@ function Button({ variant, text, name }: ButtonProps) {
       return (
         <button
           className={cn(
-            `${name} min-w-40 min-h-14 text-x	text-black bg-white hover:bg-slate-300`
+            `${name} min-w-40 min-h-14 text-x	text-black bg-stone-700 hover:bg-slate-300`
           )}
         >
           {text}
