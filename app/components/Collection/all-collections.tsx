@@ -34,7 +34,7 @@ function AllCollections({}: Props) {
   selectedFewOtherForShow.map((m) => console.log(m));
 
   return (
-    <div className={cn("our-collection flex flex-col gap-4 p-4")}>
+    <div className={cn("our-collection flex flex-col gap-4 p-4 my-8")}>
       {selectedFewOtherForShow.map((collection, key) => {
         return (
           <div

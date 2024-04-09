@@ -28,6 +28,7 @@
   margin: 0;
   padding: 0;
   padding-inline: 0;
+  outline: none;
 }
 
 body {
@@ -328,7 +329,8 @@ svg {
   color: #a56c27;
   text-decoration: 1.5px underline #a56c27;
   text-underline-offset: 8px;
-  text-shadow: var(--text-shadow);
+  -moz-text-decoration: 1.5px underline #a56c27;
+  -moz-text-underline-offset: 8px;
   font-weight: 600;
   position: absolute;
   bottom: 0.8rem;
