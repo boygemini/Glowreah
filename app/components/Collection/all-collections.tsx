@@ -54,7 +54,7 @@ function AllCollections({}: Props) {
             }}
             className="card-group all-collection p-4 w-full min-w-28 relative"
           >
-            <Shade>
+            <Shade className={"all-c-shade"}>
               <p className="coll-text col-ent text-2xl">
                 See our entire collection
               </p>

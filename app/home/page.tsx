@@ -39,7 +39,11 @@ const Home: React.FC = (props: Props) => {
       {/* <Slide /> */}
 
       <AllCollections />
-      <div className={cn("banner flex flex-col items-start w-full p-4 py-7")}>
+      <div
+        className={cn(
+          "banner flex flex-col items-start w-full p-4 py-7 bg-gray-100"
+        )}
+      >
         <h1 className={cn("banner-title font-extrabold text-4xl leading-10")}>
           Have a design you adore and want to bring to life?
         </h1>
@@ -50,7 +54,7 @@ const Home: React.FC = (props: Props) => {
         </p>
         <Button text={"How does it work?"} className={"banner-btn"} />
       </div>
-      <div className={cn("showcase relative mx-auto my-7")}>
+      <div className={cn("showcase relative")}>
         <Img
           variant={"fill-bg"}
           src="/use3.webp"
