@@ -21,7 +21,7 @@ function Slide() {
         </p>
       </div>
       <Button
-        name={"featured-shop-button text-2xl font-bold"}
+        className={"featured-shop-button text-2xl font-bold"}
         text={"Let's shop"}
       />
 

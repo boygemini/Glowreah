@@ -7,39 +7,38 @@ import Button from "@/app/components/ui/Button";
 import { cn } from "@/lib/utils";
 import Img from "@/app/components/ui/card-image";
 import AllCollections from "../components/Collection/all-collections";
+import { getCollectionNamesForHumans } from "@/lib/data";
 
 type Props = {};
-let other = [
-  "Dresses and Jumpsuits",
-  "T-Shirts",
-  "Shorts",
-  "Blouses and Shirts",
-  "Jeans",
-  "Sweaters and Cardigans",
-  "Jackets",
-  "Blazers",
-  "Coats",
-  "Leathers",
-  "Pyjamas",
-];
 
 const Home: React.FC = (props: Props) => {
-  const collections = ["Tops", "Pants", "Skirts", "Gowns"];
-  console.log(props);
+  const collections = getCollectionNamesForHumans([
+    "tops",
+    "skirts",
+    "pants",
+    "gowns",
+    "party",
+    "office",
+  ]);
+
+  console.log(collections);
+
   return (
     <div className="content">
       <NavBar />
       <Hero />
       {collections.map((title, index) => (
         <Tile
-          title={title}
+          title={title.name}
           id={index.toFixed()}
           key={index}
-          imgSrc={"/use2.webp"}
+          imgSrc={title.image}
           imgAlt="just an image"
         />
       ))}
       {/* <Slide /> */}
+
+      <AllCollections />
       <div className={cn("banner flex flex-col items-start w-full p-4 py-7")}>
         <h1 className={cn("banner-title font-extrabold text-4xl leading-10")}>
           Have a design you adore and want to bring to life?
@@ -49,7 +48,7 @@ const Home: React.FC = (props: Props) => {
           Contact us, and we'll skillfully replicate or customize it to
           perfection, just for you.
         </p>
-        <Button text={"How does it work?"} name={"banner-btn"} />
+        <Button text={"How does it work?"} className={"banner-btn"} />
       </div>
       <div className={cn("showcase relative mx-auto my-7")}>
         <Img
@@ -62,11 +61,10 @@ const Home: React.FC = (props: Props) => {
           <p
             className={cn("text-white font-bold underline-offset-8 underline")}
           >
-            See more of our collections
+            Check us out!
           </p>
         </div>
       </div>
-      <AllCollections />
 
       {/* <div className="other-collections flex shrink flex-wrap gap-1 p-4">
         {other.map((group, id) => {

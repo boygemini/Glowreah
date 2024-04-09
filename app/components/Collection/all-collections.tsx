@@ -23,40 +23,69 @@ type Props = {
 function AllCollections({}: Props) {
   const [seeAll, setSeeAll] = useState(false);
 
-  const firstThereCollections = [];
-  let allCollections = getCollectionNamesForHumans();
-  console.log(allCollections);
-  let i = 6;
-  for (i; i < 9; i++) {
-    firstThereCollections.push(allCollections[i]);
-  }
+  let selectedFewOtherForShow = getCollectionNamesForHumans([
+    "dressesandjumps",
+    "shorts",
+    "jackets",
+  ]);
+
+  let entireCollection = getCollectionNamesForHumans();
+
+  selectedFewOtherForShow.map((m) => console.log(m));
 
   return (
     <div className={cn("our-collection flex flex-col gap-4 p-4")}>
-      {firstThereCollections.map((collection, key) => {
+      {selectedFewOtherForShow.map((collection, key) => {
         return (
           <div
             key={key}
             style={{ backgroundImage: `url(${collection.image})` }}
             className="card-group p-4 w-full min-w-28 relative"
           >
-            <p className="coll-text text-center">{collection.name}</p>
+            <p className="coll-text text-center text-2xl">{collection.name}</p>
           </div>
         );
       })}
       <Drawer>
         <DrawerTrigger className={cn("w-full")}>
-          <div className="card-group p-4 w-full min-w-28 relative">
-            <p className="coll-text text-center">See all our collections</p>
+          <div
+            style={{
+              backgroundImage: `url('/spant.png') `,
+            }}
+            className="card-group all-collection p-4 w-full min-w-28 relative"
+          >
+            <Shade>
+              <p className="coll-text col-ent text-2xl">
+                See our entire collection
+              </p>
+            </Shade>
           </div>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className={cn("our-collection-modal bg-white")}>
           <DrawerHeader>
-            <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-            <DrawerDescription>This action cannot be undone.</DrawerDescription>
+            <DrawerTitle className={cn("text-lg font-semibold")}>
+              Our Collections
+            </DrawerTitle>
           </DrawerHeader>
-          <DrawerFooter>
-            <Button text={"Click Me"} />
+          <div className="w-full overflow-y-scroll flex flex-col gap-4 p-4 col-list">
+            {entireCollection.map((collection, key) => {
+              return (
+                <div
+                  key={key}
+                  style={{ backgroundImage: `url(${collection.image})` }}
+                  className="card-group p-4 w-full min-w-28 relative"
+                >
+                  <p className="coll-text rm-underline text-center text-2xl">
+                    {collection.name}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+          <DrawerFooter className="drawer-footer">
+            <DrawerClose className={cn("w-full")}>
+              <Button text={"Cool, thanks!"} className={"bottom-close-btn"} />
+            </DrawerClose>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

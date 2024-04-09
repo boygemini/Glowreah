@@ -20,7 +20,7 @@ export function Tile({ id, title, imgSrc, imgAlt }: TileProps) {
         <div className="text-content absolute bottom-6 left-6 p-4 py-7">
           <h1 className="title font-semibold text-3xl">{title}</h1>
           <p className="discover text-1xl underline underline-offset-8">
-            Discover more
+            Shop collection
           </p>
         </div>
       </figure>
