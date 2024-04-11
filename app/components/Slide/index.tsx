@@ -5,14 +5,14 @@ import { featuredList } from "@/lib/data";
 
 function Slide() {
   const latestFeaturedCollections = [];
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i <= 10; i++) {
     let latestFeatured = featuredList[i];
     latestFeaturedCollections.push(latestFeatured);
   }
 
   return (
-    <div className="featured w-full">
-      <div className="wk-ft-head p-4">
+    <div className="hero-content w-full">
+      <div className="hero-header p-4">
         <h1 className={cn("hero-title text-4xl font-black")}>
           SPRING DEAL IS 30% OFF EVERYTHING
         </h1>
@@ -28,11 +28,12 @@ function Slide() {
       <div className={cn("slide-row overflow-x-scroll gap-1 flex flex-row")}>
         {latestFeaturedCollections.map((featured, key) => {
           let { id, name, description, category, images } = featured;
+          console.log(id);
           return (
             <div className="wk-feat" key={key}>
               <p
                 className={cn(
-                  "tag text-red-600 font-semibold text-lg z-10 absolute top-4 left-4 p-3"
+                  "tag text-red-500 font-semibold text-lg z-10 absolute top-4 left-4 p-3"
                 )}
               >
                 featured

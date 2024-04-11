@@ -8,6 +8,9 @@ import { cn } from "@/lib/utils";
 import Img from "@/app/components/ui/card-image";
 import AllCollections from "../components/Collection/all-collections";
 import { getCollectionNamesForHumans } from "@/lib/data";
+import Newsletter from "../components/newsletter";
+import Xline from "../components/ui/xline";
+import Footer from "../components/footer";
 
 type Props = {};
 
@@ -20,8 +23,6 @@ const Home: React.FC = (props: Props) => {
     "party",
     "office",
   ]);
-
-  console.log(collections);
 
   return (
     <div className="content">
@@ -36,12 +37,10 @@ const Home: React.FC = (props: Props) => {
           imgAlt="just an image"
         />
       ))}
-      {/* <Slide /> */}
-
       <AllCollections />
       <div
         className={cn(
-          "banner flex flex-col items-start w-full p-4 py-7 bg-gray-100"
+          "banner flex flex-col items-start w-full p-4 py-14 bg-gray-50"
         )}
       >
         <h1 className={cn("banner-title font-extrabold text-4xl leading-10")}>
@@ -69,16 +68,11 @@ const Home: React.FC = (props: Props) => {
           </p>
         </div>
       </div>
-
-      {/* <div className="other-collections flex shrink flex-wrap gap-1 p-4">
-        {other.map((group, id) => {
-          return (
-            <div key={id} className="card-group p-6 max-w-56 min-w-28 relative">
-              <p className="group-item text-center bottom-5 left-5">{group}</p>
-            </div>
-          );
-        })}
-      </div> */}
+      <div className="footer-newsletter-container bg-gray-50">
+        <Newsletter />
+        <Xline />
+        <Footer />
+      </div>
       {/* <NavBar variant={"bottom"} /> */}
     </div>
   );

@@ -1,0 +1,53 @@
+{
+  "featured": [
+    {
+      "id": "glowreah-473839",
+      "name": "Lake beach gown",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bgown.webp"]
+    },
+    {
+      "id": "glowreah-883924",
+      "name": "Fuck boy top",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bgown2.webp"]
+    },
+    {
+      "id": "glowreah-489284",
+      "name": "Lake rounde top",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/btop.webp"]
+    },
+    {
+      "id": "glowreah-8439842",
+      "name": "Lake beach top",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bskirt.webp"]
+    },
+    {
+      "id": "glowreah-347342",
+      "name": "Lake gown",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bgown2.webp"]
+    },
+    {
+      "id": "glowreah-347323",
+      "name": "Lake beach pant",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bpant2.webp"]
+    },
+    {
+      "id": "glowreah-347329",
+      "name": "Lake beach top",
+      "category": "featured",
+      "description": "lorem impsum says fuck you!!",
+      "images": ["/bgown.webp"]
+    }
+  ]
+}

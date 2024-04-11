@@ -10,14 +10,6 @@ type Props = {};
 const Hero: React.FC = (props: Props) => {
   return (
     <div className={"hero"}>
-      {/* <Image
-        className={cn("hero-img")}
-        src="/usse.png"
-        alt="model"
-        fill={true}
-        priority={true}
-        objectFit={"cover"}
-      /> */}
       <div className="headcap absolute"></div>
       <Slide />
     </div>
