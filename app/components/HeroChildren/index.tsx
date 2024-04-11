@@ -3,9 +3,9 @@ import Img from "../ui/card-image";
 import Button from "@/app/components/ui/Button";
 import { featuredList } from "@/lib/data";
 
-function Slide() {
+function HeroChildren() {
   const latestFeaturedCollections = [];
-  for (let i = 0; i <= 10; i++) {
+  for (let i = 0; i <= 3; i++) {
     let latestFeatured = featuredList[i];
     latestFeaturedCollections.push(latestFeatured);
   }
@@ -59,4 +59,4 @@ function Slide() {
   );
 }
 
-export default Slide;
+export default HeroChildren;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavBar from "@/app/components/navbar";
 import Hero from "@/app/components/hero";
 import { Tile } from "@/app/components/Tile";
-import Slide from "@/app/components/Slide";
+import HeroChildren from "@/app/components/HeroChildren";
 import Button from "@/app/components/ui/Button";
 import { cn } from "@/lib/utils";
 import Img from "@/app/components/ui/card-image";
