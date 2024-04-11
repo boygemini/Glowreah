@@ -31,8 +31,27 @@
   outline: none;
 }
 
+html {
+  min-height: 100vh;
+}
+
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   /* background-color: var(--bg-color); */
+}
+
+.main {
+  flex-grow: 1;
+  margin-top: 4.2rem;
+}
+
+footer {
+  display: flex;
+  justify-self: end;
+  align-self: end;
+  margin-top: auto !important  ;
 }
 
 .top-icons {
@@ -211,7 +230,6 @@ svg {
 }
 
 .hero-content {
-  padding-top: 4rem;
   /* padding-bottom: 3rem; */
   /* background-color: #faebd76c; */
 }

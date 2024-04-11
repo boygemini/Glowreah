@@ -26,7 +26,6 @@ const Home: React.FC = (props: Props) => {
 
   return (
     <div className="content">
-      <NavBar />
       <Hero />
       {collections.map((title, index) => (
         <Tile
@@ -70,8 +69,6 @@ const Home: React.FC = (props: Props) => {
       </div>
       <div className="footer-newsletter-container bg-gray-50">
         <Newsletter />
-        <Xline />
-        <Footer />
       </div>
       {/* <NavBar variant={"bottom"} /> */}
     </div>
