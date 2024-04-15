@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
 
-type Props = {};
+import React, { useState, useContext } from "react";
+import { ShopContext } from "../contexts/ShopContext";
 
-const Shop = (props: Props) => {
-  return <div>this is the shop</div>;
+interface Props {
+  children: React.ReactNode;
+}
+
+const Shop = ({ children }: Props) => {
+  const shopContext = useContext(ShopContext);
+  const { collectionTitle } = shopContext;
+  return (
+    <>
+      <h1>{collectionTitle}</h1>
+    </>
+  );
 };
 
 export default Shop;

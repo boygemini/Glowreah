@@ -85,6 +85,8 @@ svg {
 
 /* menu button */
 .menu-btn {
+  font-size: 1rem;
+  flex-direction: row;
   /* background-color: white; */
 }
 
@@ -112,12 +114,12 @@ svg {
 }
 
 .top-nav {
-  height: 4.5rem;
+  height: auto;
   z-index: 1;
   position: fixed !important;
   top: 0;
   align-items: center;
-  background-color: transparent;
+  background-color: var(--bg-color);
   /* background-color: rgb(255, 192, 203); */
 }
 
