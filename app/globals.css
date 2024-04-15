@@ -105,6 +105,12 @@ svg {
   overflow: hidden;
 }
 
+button {
+  background-color: rgb(244, 247, 250);
+  padding: 1rem;
+  font-weight: 600;
+}
+
 .hero-title {
   color: #a27c58;
 }

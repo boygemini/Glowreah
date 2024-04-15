@@ -9,10 +9,13 @@ interface Props {
 
 const Shop = ({ children }: Props) => {
   const shopContext = useContext(ShopContext);
-  const { collectionTitle } = shopContext;
+  const { collectionTitle, setCollectionTitle } = shopContext;
+
+  const updateTitle = () => setCollectionTitle("Men's Collection");
   return (
     <>
       <h1>{collectionTitle}</h1>
+      <button onClick={updateTitle}>Update store name</button>
     </>
   );
 };

@@ -5,13 +5,15 @@ interface ButtonProps {
   className?: String;
   text: String;
   style?: String;
+  onclick?: () => void;
 }
 
-function Button({ variant, text, className }: ButtonProps) {
+function Button({ variant, text, className, onclick }: ButtonProps) {
   switch (variant) {
     case "menu":
       return (
         <button
+          onClick={onclick}
           className={cn(
             `${className} menu-btn text-black flex flex-col items-center h-17 font-sans p-0`
           )}
@@ -38,9 +40,8 @@ function Button({ variant, text, className }: ButtonProps) {
     default:
       return (
         <button
-          className={cn(
-            `${className} min-w-40 min-h-14 text-x	text-black bg-stone-700`
-          )}
+          onClick={onclick}
+          className={cn(`${className} w-auto p-5 text-x	text-black bg-red-500`)}
         >
           {text}
         </button>
