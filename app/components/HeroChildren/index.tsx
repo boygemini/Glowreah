@@ -1,15 +1,25 @@
 import { cn } from "@/lib/utils";
 import Img from "../ui/card-image";
 import Button from "@/app/components/ui/Button";
-import { featuredList } from "@/lib/data";
 
-function HeroChildren() {
-  const latestFeaturedCollections = [];
-  for (let i = 0; i <= 3; i++) {
-    let latestFeatured = featuredList[i];
-    latestFeaturedCollections.push(latestFeatured);
-  }
+import { ObjectId } from "mongodb";
+import { GetStaticProps } from "next";
+import getProductsStaticProps from "./../../api/getData";
 
+export type ItemObject = {
+  _id: ObjectId;
+  name: string;
+  category: string;
+  description: string;
+};
+
+interface Props {
+  products: ItemObject[];
+}
+
+function HeroChildren({ products }: Props) {
+  const featuredCollection = products;
+  console.log("fucking result is :", { products });
   return (
     <div className="hero-content w-full">
       <div className="hero-header p-4">
@@ -25,10 +35,9 @@ function HeroChildren() {
         text={"Let's shop"}
       />
 
-      <div className={cn("slide-row overflow-x-scroll gap-1 flex flex-row")}>
-        {latestFeaturedCollections.map((featured, key) => {
+      {/* <div className={cn("slide-row overflow-x-scroll gap-1 flex flex-row")}>
+        {featuredCollection.map((featured, key) => {
           let { id, name, description, category, images } = featured;
-          console.log(id);
           return (
             <div className="wk-feat" key={key}>
               <p
@@ -41,22 +50,21 @@ function HeroChildren() {
               <Img
                 customeClassName="feat-img"
                 variant="fill-bg"
-                src={images[0]}
+                src={images ? images[0] : ""}
               />
               <div className="summary ">
                 <h1 className={cn("s-title text-black font-bold text-2xl")}>
                   {name}
                 </h1>
-                {/* <p className={cn("s-text line-clamp-1 text-black font-medium")}>
-                  {description}
-                </p> */}
               </div>
             </div>
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 }
+
+export const getStaticProps = getProductsStaticProps("featured", "Glowreah");
 
 export default HeroChildren;

@@ -8,7 +8,7 @@ type Props = {
   alt?: string;
   width?: number;
   height?: number;
-  customeClassName: string;
+  customeClassName?: string;
 };
 
 export default function Img({

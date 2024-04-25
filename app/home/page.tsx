@@ -8,9 +8,6 @@ import { cn } from "@/lib/utils";
 import Img from "@/app/components/ui/card-image";
 import AllCollections from "../components/Collection/all-collections";
 import { getCollectionNamesForHumans } from "@/lib/data";
-import Newsletter from "../components/newsletter";
-import Xline from "../components/ui/xline";
-import Footer from "../components/footer";
 
 type Props = {};
 
@@ -66,9 +63,6 @@ const Home: React.FC = (props: Props) => {
             Check us out!
           </p>
         </div>
-      </div>
-      <div className="footer-newsletter-container bg-gray-50">
-        <Newsletter />
       </div>
       {/* <NavBar variant={"bottom"} /> */}
     </div>

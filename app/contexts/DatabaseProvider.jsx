@@ -1,7 +1,7 @@
 "use client";
 
 import React, { createContext } from "react";
-import useDatabase from "./useDatabase";
+import useDatabase from "../../lib/useDatabase";
 
 const DatabaseContext = createContext({
   db: null,
@@ -9,7 +9,7 @@ const DatabaseContext = createContext({
 });
 
 const DatabaseProvider = ({ children }) => {
-  const { db, initialized, allStores } = useDatabase();
+  const { db, initialized } = useDatabase();
 
   return (
     <DatabaseContext.Provider value={{ db, initialized }}>

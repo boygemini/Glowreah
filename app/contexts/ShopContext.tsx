@@ -2,7 +2,7 @@
 
 import { createContext, useContext } from "react";
 
-interface itemObject {
+export interface itemObject {
   id: string;
   name: string;
   category: string;
@@ -12,7 +12,7 @@ interface itemObject {
 
 export type ShopContent = {
   collectionTitle: string;
-  collectionList: Array<object>;
+  collectionList: Array<itemObject>;
   setCollectionTitle: (title: string) => void;
   setCollectionList: (list: Array<itemObject>) => void;
 };

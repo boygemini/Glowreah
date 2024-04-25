@@ -29,10 +29,11 @@
     ".next/types/**/*.ts",
     "app/components/ui/Button.jsx",
     "lib/useDatabase.jsx",
-    "lib/DatabaseProvider.jsx",
+    "app/contexts/DatabaseProvider.jsx",
     "lib/createDatabase.js",
     "lib/simpleIndexedDB.js",
-    "app/components/HeroChildren/index.jsx"
+    "app/components/HeroChildren/index.jsx",
+    "app/api/getData.ts"
   ],
   "exclude": ["node_modules"]
 }

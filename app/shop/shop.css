@@ -1,0 +1,13 @@
+.store-title {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.filter-btn {
+  background-color: white;
+}
+
+.item-container {
+  padding: 1rem;
+}
